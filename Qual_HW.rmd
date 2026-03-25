@@ -1,0 +1,89 @@
+---
+title: "Untitled"
+author: "Eugenia Nikonorova"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+Input file in the same folder (called reads.fastq)
+
+```{bash}
+export PATH=/opt/homebrew/bin/fastqc:$PATH
+fastqc reads.fastq
+gzip reads_fastqc.zip
+```
+
+
+Total number of reads > 60bp from fastqc txt report file
+```{bash}
+awk '
+/>>Sequence Length Distribution/ {flag=1; next}
+/>>END_MODULE/ {flag=0}
+flag && $1 !~ /^#/ {
+    split($1, a, "-")
+    start = a[1]
+
+    if (start >= 60)
+        sum += $2
+}
+END {
+    printf "%.0f\n", sum
+}' reads_fastqc/fastqc_data.txt
+```
+
+
+phred quality calculation
+```{python}
+
+#create dictinary for Phred scores
+phred = {
+    '!': 0, '"': 1, '#': 2, '$': 3, '%': 4, '&': 5, "'": 6, '(': 7, ')': 8, '*': 9,
+    '+': 10, ',': 11, '-': 12, '.': 13, '/': 14, '0': 15, '1': 16, '2': 17, '3': 18,
+    '4': 19, '5': 20, '6': 21, '7': 22, '8': 23, '9': 24, ':': 25, ';': 26, '<': 27,
+    '=': 28, '>': 29, '?': 30, '@': 31, 'A': 32, 'B': 33, 'C': 34, 'D': 35, 'E': 36,
+    'F': 37, 'G': 38, 'H': 39, 'I': 40
+}
+
+scores = []
+
+with open("reads.fastq") as f:
+    while True:
+        header = f.readline().strip()
+        seq = f.readline().strip()
+        plus = f.readline().strip()
+        qual = f.readline().strip()
+
+        if not qual:
+            break
+
+        # 10th symbol (1-based → index 9)
+        symbol = qual[9]
+        score = phred[symbol]
+        scores.append(score)
+
+# Mean as integer
+mean_score = int(sum(scores) / len(scores))
+print(mean_score)
+
+```
+
+
+sliding window trimming: 
+```{bash}
+export PATH=/opt/homebrew/bin/trimmomatic:$PATH
+trimmomatic SE reads.fastq reads.trimmed.fastq  -phred33 SLIDINGWINDOW:5:30 
+```
+
+
+Total bases, Mean length for trimmed file 
+
+```{bash}
+awk 'NR%4==2 {sum+=length($0); count++} END {
+    print "Reads:", count;
+    print "Total bases:", sum;
+    print "Mean length:", sum/count
+}' reads.trimmed.fastq
+```
+
+
+
