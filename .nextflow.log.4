@@ -1,0 +1,165 @@
+Apr-07 09:14:35.719 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nextflow-io/rnaseq-nf -profile docker
+Apr-07 09:14:36.023 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.4
+Apr-07 09:14:36.095 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/eugenianikonorova/.nextflow/plugins; core-plugins: nf-amazon@3.4.4,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.5,nf-k8s@1.2.2,nf-tower@1.17.5,nf-wave@1.16.1
+Apr-07 09:14:36.146 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Apr-07 09:14:36.148 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Apr-07 09:14:36.156 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Apr-07 09:14:36.204 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Apr-07 09:14:36.496 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Apr-07 09:14:36.526 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /Users/eugenianikonorova/.nextflow/scm
+Apr-07 09:14:38.271 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/.git/config; branch: null; remote: origin; url: https://github.com/nextflow-io/rnaseq-nf.git
+Apr-07 09:14:38.363 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+Apr-07 09:14:38.403 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/.git/config; branch: null; remote: origin; url: https://github.com/nextflow-io/rnaseq-nf.git
+Apr-07 09:14:41.201 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/nextflow.config
+Apr-07 09:14:41.204 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/nextflow.config
+Apr-07 09:14:41.249 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Apr-07 09:14:41.598 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, gs-data, batch, wave-mirror, s3-data, wave, docker, slurm, google-batch, mamba, arm64, conda, singularity, azure-batch, all-reads]
+Apr-07 09:14:41.621 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Apr-07 09:14:41.621 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Apr-07 09:14:41.626 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/eugenianikonorova/.nextflow/secrets/store.json
+Apr-07 09:14:41.629 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@15986dd5] - activable => nextflow.secret.LocalSecretsProvider@15986dd5
+Apr-07 09:14:41.644 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Apr-07 09:14:41.646 [main] DEBUG nextflow.cli.CmdRun - Launching `https://github.com/nextflow-io/rnaseq-nf` [dreamy_bardeen] DSL2 - revision: ca20a6dfd2 [master]
+Apr-07 09:14:41.733 [main] DEBUG nextflow.Session - Session UUID: 1928ab52-2c72-4012-8b4b-be3e9f787c45
+Apr-07 09:14:41.734 [main] DEBUG nextflow.Session - Run name: dreamy_bardeen
+Apr-07 09:14:41.737 [main] DEBUG nextflow.Session - Executor pool size: 10
+Apr-07 09:14:41.755 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Apr-07 09:14:42.060 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Apr-07 09:14:42.208 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.10.4 build 11173
+  Created: 10-02-2026 15:17 UTC (18:17 MSD)
+  System: Mac OS X 26.4
+  Runtime: Groovy 4.0.28 on OpenJDK 64-Bit Server VM 21.0.10+7-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 6489@Eugenias-MacBook-Pro.local [127.0.0.1]
+  CPUs: 10 - Mem: 16 GB (42.4 MB) - Swap: 3 GB (1.2 GB)
+Apr-07 09:14:42.292 [main] DEBUG nextflow.Session - Work-dir: /Users/eugenianikonorova/Documents/ITMO/ITMO_study/work [Mac OS X]
+Apr-07 09:14:42.355 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Apr-07 09:14:42.369 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Apr-07 09:14:42.374 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Apr-07 09:14:42.497 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Apr-07 09:14:42.516 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 11; maxThreads: 1000
+Apr-07 09:14:42.589 [main] DEBUG nextflow.Session - Session start
+Apr-07 09:14:43.163 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Apr-07 09:14:44.037 [main] INFO  nextflow.Nextflow - R N A S E Q - N F   P I P E L I N E
+===================================
+transcriptome: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/data/ggal/ggal_1_48850000_49020000.Ggal71.500bpflank.fa
+reads        : /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/data/ggal/ggal_gut_{1,2}.fq
+outdir       : results
+
+Apr-07 09:14:44.166 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-07 09:14:44.167 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-07 09:14:44.185 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Apr-07 09:14:44.201 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=10; memory=16 GB; capacity=10; pollInterval=100ms; dumpInterval=5m
+Apr-07 09:14:44.207 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Apr-07 09:14:44.258 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'RNASEQ:INDEX': maxForks=0; fair=false; array=0
+Apr-07 09:14:44.318 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-07 09:14:44.319 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-07 09:14:44.320 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'RNASEQ:FASTQC': maxForks=0; fair=false; array=0
+Apr-07 09:14:44.326 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-07 09:14:44.326 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-07 09:14:44.327 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'RNASEQ:QUANT': maxForks=0; fair=false; array=0
+Apr-07 09:14:44.351 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-07 09:14:44.351 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-07 09:14:44.353 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MULTIQC': maxForks=0; fair=false; array=0
+Apr-07 09:14:44.357 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC, RNASEQ:INDEX, RNASEQ:QUANT, MULTIQC, INDEX, RNASEQ:FASTQC, QUANT
+Apr-07 09:14:44.359 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
+Apr-07 09:14:44.368 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/data/ggal/; pattern: ggal_gut_{1,2}.fq; options: [checkIfExists:true]
+Apr-07 09:14:44.370 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > RNASEQ:INDEX
+Apr-07 09:14:44.371 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > RNASEQ:FASTQC
+Apr-07 09:14:44.372 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > RNASEQ:QUANT
+Apr-07 09:14:44.372 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MULTIQC
+Apr-07 09:14:44.375 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_80d7908ec14951b2: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/modules/multiqc/main.nf
+  Script_800df314e4c23a21: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/modules/quant/main.nf
+  Script_746d0eea7c3616e7: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/main.nf
+  Script_12ae9fbd7cd7eda4: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/modules/index/main.nf
+  Script_7b91148450969a89: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/modules/rnaseq.nf
+  Script_4a661eff0c2e462f: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/modules/fastqc/main.nf
+Apr-07 09:14:44.376 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Apr-07 09:14:44.376 [main] DEBUG nextflow.Session - Session await
+Apr-07 09:14:44.572 [Actor Thread 8] DEBUG nextflow.util.HashBuilder - Hash asset file sha-256: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/data/ggal/ggal_1_48850000_49020000.Ggal71.500bpflank.fa
+Apr-07 09:14:44.572 [Actor Thread 10] DEBUG nextflow.util.HashBuilder - Hash asset file sha-256: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/data/ggal/ggal_gut_1.fq
+Apr-07 09:14:44.617 [Actor Thread 10] DEBUG nextflow.util.HashBuilder - Hash asset file sha-256: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/data/ggal/ggal_gut_2.fq
+Apr-07 09:14:44.643 [Actor Thread 10] DEBUG nextflow.util.HashBuilder - Hash asset file sha-256: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/bin/fastqc.sh
+Apr-07 09:14:44.774 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-07 09:14:44.776 [Task submitter] INFO  nextflow.Session - [72/9b9ae4] Submitted process > RNASEQ:INDEX (ggal_1_48850000_49020000)
+Apr-07 09:14:44.795 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-07 09:14:44.797 [Task submitter] INFO  nextflow.Session - [c6/7a9e2d] Submitted process > RNASEQ:FASTQC (ggal_gut)
+Apr-07 09:14:48.007 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: RNASEQ:INDEX (ggal_1_48850000_49020000); status: COMPLETED; exit: 125; error: -; workDir: /Users/eugenianikonorova/Documents/ITMO/ITMO_study/work/72/9b9ae416207bb99acd3d7f2b01aea1]
+Apr-07 09:14:48.010 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Apr-07 09:14:48.015 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: RNASEQ:FASTQC (ggal_gut); status: COMPLETED; exit: 125; error: -; workDir: /Users/eugenianikonorova/Documents/ITMO/ITMO_study/work/c6/7a9e2d9ae491554ed1b7c7ae17d574]
+Apr-07 09:14:48.042 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=RNASEQ:INDEX (ggal_1_48850000_49020000); work-dir=/Users/eugenianikonorova/Documents/ITMO/ITMO_study/work/72/9b9ae416207bb99acd3d7f2b01aea1
+  error [nextflow.exception.ProcessFailedException]: Process `RNASEQ:INDEX (ggal_1_48850000_49020000)` terminated with an error exit status (125)
+Apr-07 09:14:48.042 [TaskFinalizer-2] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=RNASEQ:FASTQC (ggal_gut); work-dir=/Users/eugenianikonorova/Documents/ITMO/ITMO_study/work/c6/7a9e2d9ae491554ed1b7c7ae17d574
+  error [nextflow.exception.ProcessFailedException]: Process `RNASEQ:FASTQC (ggal_gut)` terminated with an error exit status (125)
+Apr-07 09:14:48.110 [TaskFinalizer-2] ERROR nextflow.processor.TaskProcessor - Error executing process > 'RNASEQ:FASTQC (ggal_gut)'
+
+Caused by:
+  Process `RNASEQ:FASTQC (ggal_gut)` terminated with an error exit status (125)
+
+
+Command executed:
+
+  fastqc.sh "ggal_gut" "ggal_gut_1.fq ggal_gut_2.fq"
+
+Command exit status:
+  125
+
+Command output:
+  (empty)
+
+Command error:
+  Unable to find image 'nextflow/rnaseq-nf:v1.3.1' locally
+  docker: Error response from daemon: no matching manifest for linux/arm64/v8 in the manifest list entries: no match for platform in manifest: not found.
+  See 'docker run --help'.
+
+Work dir:
+  /Users/eugenianikonorova/Documents/ITMO/ITMO_study/work/c6/7a9e2d9ae491554ed1b7c7ae17d574
+
+Container:
+  docker.io/nextflow/rnaseq-nf:v1.3.1
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+Apr-07 09:14:48.181 [main] DEBUG nextflow.Session - Session await > all processes finished
+Apr-07 09:14:48.183 [TaskFinalizer-2] DEBUG nextflow.Session - Session aborted -- Cause: Process `RNASEQ:FASTQC (ggal_gut)` terminated with an error exit status (125)
+Apr-07 09:14:48.435 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Apr-07 09:14:48.471 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Apr-07 09:14:48.477 [TaskFinalizer-2] INFO  nextflow.Nextflow - Oops .. something went wrong
+Apr-07 09:14:48.692 [TaskFinalizer-2] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=2; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=6.3s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=2; peakMemory=0; ]
+Apr-07 09:14:48.692 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=2; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=6.3s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=2; peakMemory=0; ]
+Apr-07 09:14:48.694 [TaskFinalizer-2] DEBUG nextflow.Session - null
+java.lang.InterruptedException: null
+	at java.base/java.lang.Object.wait0(Native Method)
+	at java.base/java.lang.Object.wait(Object.java:366)
+	at java.base/java.lang.Thread.join(Thread.java:2079)
+	at java.base/java.lang.Thread.join(Thread.java:2155)
+	at nextflow.trace.AnsiLogObserver.onFlowComplete(AnsiLogObserver.groovy:520)
+	at nextflow.Session$_notifyFlowComplete_lambda39.doCall(Session.groovy:1121)
+	at nextflow.Session.notifyEvent(Session.groovy:1151)
+	at nextflow.Session.notifyFlowComplete(Session.groovy:1121)
+	at nextflow.Session.shutdown0(Session.groovy:779)
+	at nextflow.Session.abort(Session.groovy:834)
+	at nextflow.Session.fault(Session.groovy:796)
+	at nextflow.processor.TaskPollingMonitor.finalizeTask(TaskPollingMonitor.groovy:753)
+	at nextflow.processor.TaskPollingMonitor.safeFinalizeTask(TaskPollingMonitor.groovy:736)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1339)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1094)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:645)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethodSafe(InvokerHelper.java:82)
+	at nextflow.processor.TaskPollingMonitor$_checkTaskStatus_lambda8.doCall(TaskPollingMonitor.groovy:726)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Apr-07 09:14:48.750 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Apr-07 09:14:48.835 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

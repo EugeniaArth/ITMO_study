@@ -1,0 +1,127 @@
+Apr-08 17:33:01.650 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nextflow-io/rnaseq-nf --reads 'Bioinf_Pipelines/reads/*_{1,2}.fastq' --transcriptome /Users/eugenianikonorova/Documents/ITMO/ITMO_study/Bioinf_Pipelines/assembly/transcripts.fasta --outdir /Users/eugenianikonorova/Documents/ITMO/ITMO_study/Bioinf_Pipelines/result -profile docker
+Apr-08 17:33:01.961 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.4
+Apr-08 17:33:02.045 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/eugenianikonorova/.nextflow/plugins; core-plugins: nf-amazon@3.4.4,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.5,nf-k8s@1.2.2,nf-tower@1.17.5,nf-wave@1.16.1
+Apr-08 17:33:02.096 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Apr-08 17:33:02.098 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Apr-08 17:33:02.108 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Apr-08 17:33:02.161 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Apr-08 17:33:02.546 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Apr-08 17:33:02.573 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /Users/eugenianikonorova/.nextflow/scm
+Apr-08 17:33:04.523 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/.git/config; branch: null; remote: origin; url: https://github.com/nextflow-io/rnaseq-nf.git
+Apr-08 17:33:04.640 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+Apr-08 17:33:04.685 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/.git/config; branch: null; remote: origin; url: https://github.com/nextflow-io/rnaseq-nf.git
+Apr-08 17:33:07.907 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/nextflow.config
+Apr-08 17:33:07.912 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/nextflow.config
+Apr-08 17:33:07.976 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Apr-08 17:33:08.386 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, gs-data, batch, wave-mirror, s3-data, wave, docker, slurm, google-batch, mamba, arm64, conda, singularity, azure-batch, all-reads]
+Apr-08 17:33:08.464 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Apr-08 17:33:08.464 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Apr-08 17:33:08.472 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/eugenianikonorova/.nextflow/secrets/store.json
+Apr-08 17:33:08.478 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@3daf03d8] - activable => nextflow.secret.LocalSecretsProvider@3daf03d8
+Apr-08 17:33:08.481 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Apr-08 17:33:08.482 [main] DEBUG nextflow.cli.CmdRun - Launching `https://github.com/nextflow-io/rnaseq-nf` [loquacious_poincare] DSL2 - revision: ca20a6dfd2 [master]
+Apr-08 17:33:08.586 [main] DEBUG nextflow.Session - Session UUID: 07917e72-5094-419c-8045-0d98ae4d3bda
+Apr-08 17:33:08.586 [main] DEBUG nextflow.Session - Run name: loquacious_poincare
+Apr-08 17:33:08.587 [main] DEBUG nextflow.Session - Executor pool size: 10
+Apr-08 17:33:08.598 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Apr-08 17:33:08.607 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Apr-08 17:33:09.064 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.10.4 build 11173
+  Created: 10-02-2026 15:17 UTC (18:17 MSD)
+  System: Mac OS X 26.4
+  Runtime: Groovy 4.0.28 on OpenJDK 64-Bit Server VM 21.0.10+7-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 36761@Eugenias-MacBook-Pro.local [127.0.0.1]
+  CPUs: 10 - Mem: 16 GB (98.8 MB) - Swap: 3 GB (1.1 GB)
+Apr-08 17:33:09.183 [main] DEBUG nextflow.Session - Work-dir: /Users/eugenianikonorova/Documents/ITMO/ITMO_study/work [Mac OS X]
+Apr-08 17:33:09.265 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Apr-08 17:33:09.291 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Apr-08 17:33:09.300 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Apr-08 17:33:09.405 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Apr-08 17:33:09.424 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 11; maxThreads: 1000
+Apr-08 17:33:09.505 [main] DEBUG nextflow.Session - Session start
+Apr-08 17:33:10.146 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Apr-08 17:33:11.058 [main] INFO  nextflow.Nextflow - R N A S E Q - N F   P I P E L I N E
+===================================
+transcriptome: /Users/eugenianikonorova/Documents/ITMO/ITMO_study/Bioinf_Pipelines/assembly/transcripts.fasta
+reads        : Bioinf_Pipelines/reads/*_{1,2}.fastq
+outdir       : /Users/eugenianikonorova/Documents/ITMO/ITMO_study/Bioinf_Pipelines/result
+
+Apr-08 17:33:11.660 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-08 17:33:11.668 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-08 17:33:11.713 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Apr-08 17:33:11.738 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=10; memory=16 GB; capacity=10; pollInterval=100ms; dumpInterval=5m
+Apr-08 17:33:11.743 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Apr-08 17:33:11.795 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'RNASEQ:INDEX': maxForks=0; fair=false; array=0
+Apr-08 17:33:11.884 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-08 17:33:11.884 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-08 17:33:11.886 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'RNASEQ:FASTQC': maxForks=0; fair=false; array=0
+Apr-08 17:33:11.892 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-08 17:33:11.892 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-08 17:33:11.893 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'RNASEQ:QUANT': maxForks=0; fair=false; array=0
+Apr-08 17:33:11.933 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Apr-08 17:33:11.933 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Apr-08 17:33:11.935 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MULTIQC': maxForks=0; fair=false; array=0
+Apr-08 17:33:11.941 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC, RNASEQ:INDEX, RNASEQ:QUANT, MULTIQC, INDEX, RNASEQ:FASTQC, QUANT
+Apr-08 17:33:11.944 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
+Apr-08 17:33:11.957 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: Bioinf_Pipelines/reads/; pattern: *_{1,2}.fastq; options: [checkIfExists:true]
+Apr-08 17:33:11.959 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > RNASEQ:INDEX
+Apr-08 17:33:11.960 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > RNASEQ:FASTQC
+Apr-08 17:33:11.962 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > RNASEQ:QUANT
+Apr-08 17:33:11.965 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MULTIQC
+Apr-08 17:33:11.974 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_80d7908ec14951b2: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/modules/multiqc/main.nf
+  Script_800df314e4c23a21: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/modules/quant/main.nf
+  Script_746d0eea7c3616e7: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/main.nf
+  Script_7b91148450969a89: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/modules/rnaseq.nf
+  Script_12ae9fbd7cd7eda4: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/modules/index/main.nf
+  Script_4a661eff0c2e462f: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/modules/fastqc/main.nf
+Apr-08 17:33:11.974 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Apr-08 17:33:11.975 [main] DEBUG nextflow.Session - Session await
+Apr-08 17:33:12.324 [Actor Thread 3] DEBUG nextflow.util.HashBuilder - Hash asset file sha-256: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/bin/fastqc.sh
+Apr-08 17:33:12.462 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-08 17:33:12.466 [Task submitter] INFO  nextflow.Session - [58/809f5f] Submitted process > RNASEQ:FASTQC (SRR21853786)
+Apr-08 17:33:12.489 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-08 17:33:12.490 [Task submitter] INFO  nextflow.Session - [38/b9f364] Submitted process > RNASEQ:INDEX (transcripts)
+Apr-08 17:33:12.521 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-08 17:33:12.522 [Task submitter] INFO  nextflow.Session - [04/344394] Submitted process > RNASEQ:FASTQC (SRR21853788)
+Apr-08 17:33:12.539 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-08 17:33:12.541 [Task submitter] INFO  nextflow.Session - [fa/622fc2] Submitted process > RNASEQ:FASTQC (SRR21853789)
+Apr-08 17:33:12.553 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-08 17:33:12.553 [Task submitter] INFO  nextflow.Session - [13/f37348] Submitted process > RNASEQ:FASTQC (SRR21853787)
+Apr-08 17:33:26.764 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: RNASEQ:INDEX (transcripts); status: COMPLETED; exit: 0; error: -; workDir: /Users/eugenianikonorova/Documents/ITMO/ITMO_study/work/38/b9f3646dd83284ecb72d2f808bf1a6]
+Apr-08 17:33:26.782 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Apr-08 17:33:27.168 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-08 17:33:27.173 [Task submitter] INFO  nextflow.Session - [fb/ea771c] Submitted process > RNASEQ:QUANT (SRR21853789)
+Apr-08 17:33:27.254 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-08 17:33:27.257 [Task submitter] INFO  nextflow.Session - [e2/30f6c0] Submitted process > RNASEQ:QUANT (SRR21853787)
+Apr-08 17:33:27.284 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-08 17:33:27.287 [Task submitter] INFO  nextflow.Session - [51/c01e8e] Submitted process > RNASEQ:QUANT (SRR21853786)
+Apr-08 17:33:27.408 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-08 17:33:27.432 [Task submitter] INFO  nextflow.Session - [4f/2bf0cd] Submitted process > RNASEQ:QUANT (SRR21853788)
+Apr-08 17:34:18.496 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: RNASEQ:QUANT (SRR21853786); status: COMPLETED; exit: 0; error: -; workDir: /Users/eugenianikonorova/Documents/ITMO/ITMO_study/work/51/c01e8e49dc36a1861effa942a8e62b]
+Apr-08 17:34:22.888 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: RNASEQ:QUANT (SRR21853787); status: COMPLETED; exit: 0; error: -; workDir: /Users/eugenianikonorova/Documents/ITMO/ITMO_study/work/e2/30f6c09a683cdf116ed33020151595]
+Apr-08 17:34:33.723 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: RNASEQ:QUANT (SRR21853789); status: COMPLETED; exit: 0; error: -; workDir: /Users/eugenianikonorova/Documents/ITMO/ITMO_study/work/fb/ea771cd9d6b3ed3deb48d77c5d0061]
+Apr-08 17:34:35.759 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: RNASEQ:QUANT (SRR21853788); status: COMPLETED; exit: 0; error: -; workDir: /Users/eugenianikonorova/Documents/ITMO/ITMO_study/work/4f/2bf0cdc00a22071b1b2c0ca56efd9e]
+Apr-08 17:34:40.467 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: RNASEQ:FASTQC (SRR21853787); status: COMPLETED; exit: 0; error: -; workDir: /Users/eugenianikonorova/Documents/ITMO/ITMO_study/work/13/f3734821dc70d1704b66b99f1c1c36]
+Apr-08 17:34:40.610 [TaskFinalizer-6] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=30; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Apr-08 17:34:42.497 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: RNASEQ:FASTQC (SRR21853786); status: COMPLETED; exit: 0; error: -; workDir: /Users/eugenianikonorova/Documents/ITMO/ITMO_study/work/58/809f5ff0ccf1f2f0b51a26d91f9932]
+Apr-08 17:35:02.549 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: RNASEQ:FASTQC (SRR21853789); status: COMPLETED; exit: 0; error: -; workDir: /Users/eugenianikonorova/Documents/ITMO/ITMO_study/work/fa/622fc2103f4759223b9a01989247a7]
+Apr-08 17:35:36.781 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: RNASEQ:FASTQC (SRR21853788); status: COMPLETED; exit: 0; error: -; workDir: /Users/eugenianikonorova/Documents/ITMO/ITMO_study/work/04/3443947372f5913dbcf53b17565971]
+Apr-08 17:35:36.922 [Actor Thread 8] DEBUG nextflow.util.HashBuilder - Hash asset file sha-256: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/multiqc/nextflow_logo.png
+Apr-08 17:35:36.929 [Actor Thread 8] DEBUG nextflow.util.HashBuilder - Hash asset file sha-256: /Users/eugenianikonorova/.nextflow/assets/nextflow-io/rnaseq-nf/multiqc/multiqc_config.yaml
+Apr-08 17:35:37.358 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Apr-08 17:35:37.396 [Task submitter] INFO  nextflow.Session - [67/09ba43] Submitted process > MULTIQC
+Apr-08 17:35:42.863 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: MULTIQC; status: COMPLETED; exit: 0; error: -; workDir: /Users/eugenianikonorova/Documents/ITMO/ITMO_study/work/67/09ba43289d5fdd0fd280519a81202f]
+Apr-08 17:35:42.985 [main] DEBUG nextflow.Session - Session await > all processes finished
+Apr-08 17:35:43.113 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Apr-08 17:35:43.114 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Apr-08 17:35:43.219 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Apr-08 17:35:43.221 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Apr-08 17:35:43.242 [main] INFO  nextflow.Nextflow - 
+Done! Open the following report in your browser --> /Users/eugenianikonorova/Documents/ITMO/ITMO_study/Bioinf_Pipelines/result/multiqc_report.html
+
+Apr-08 17:35:43.338 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=10; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=11m 33s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=8; peakCpus=8; peakMemory=0; ]
+Apr-08 17:35:43.608 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Apr-08 17:35:43.673 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Apr-08 17:35:43.673 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
