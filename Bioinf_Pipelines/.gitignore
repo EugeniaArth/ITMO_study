@@ -1,0 +1,7 @@
+.DS_Store
+.RData
+.RDataTmp
+.Rhistory
+.nextflow/
+*.fastq
+*.fastq.gz
