@@ -1,8 +1,8 @@
 nextflow.enable.dsl=2
 
 params {
-    reads: String = "/Users/eugenianikonorova/Documents/ITMO/data/*_{1,2}.fastq"
-    reference: Path = "HW2/NZ_CP012026.1.fasta"
+    reads: String = "/Users/eugenianikonorova/Documents/ITMO/data/*_{1,2}.fastq" 
+    reference: Path = "/Users/eugenianikonorova/Documents/ITMO/data/NZ_CP012026.1.fasta"
     outdir: Path = "HW2/results"
     threads: Integer = 10
     memory: String = "10 GB"
