@@ -1,0 +1,12 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - bioconda::fastqc=0.12.1
+  - bioconda::fastp=0.23.4
+  - bioconda::bwa=0.7.18
+  - bioconda::samtools=1.21
+  - bioconda::bcftools=1.23.1
+  - bioconda::htslib=1.23.1
+  - python=3.11
+  - matplotlib

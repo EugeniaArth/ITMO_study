@@ -3,5 +3,7 @@
 .RDataTmp
 .Rhistory
 .nextflow/
+work/
 *.fastq
 *.fastq.gz
+HW3/results/
