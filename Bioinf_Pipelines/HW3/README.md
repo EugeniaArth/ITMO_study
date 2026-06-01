@@ -59,7 +59,7 @@ nextflow run main.nf -profile local \
 ```
 
 ### cluster
-SLURM cluster with separate conda yml per process:
+cluster with separate conda yml per process:
 
 ```bash
 nextflow run main.nf -profile cluster \
@@ -68,7 +68,7 @@ nextflow run main.nf -profile cluster \
   --outdir results
 ```
 
-Edit `conf/cluster.config` to set your SLURM account/queue.
+Need to edit `conf/cluster.config` to set your  account/queue.
 
 ### docker / singularity
 
