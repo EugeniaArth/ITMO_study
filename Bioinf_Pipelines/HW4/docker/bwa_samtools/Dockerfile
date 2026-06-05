@@ -1,0 +1,3 @@
+FROM quay.io/biocontainers/mulled-v2-663e879d7d8fbf7b8994e094c7b6131ab581a262:0bfccc791563a9968a1d0930b795ee9f8eecaafa-0
+
+WORKDIR /data
