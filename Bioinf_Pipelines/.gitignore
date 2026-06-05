@@ -8,3 +8,4 @@ work/
 *.fastq.gz
 HW3/results/
 HW4/results/
+.DS_Store
